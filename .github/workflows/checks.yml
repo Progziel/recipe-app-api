@@ -1,4 +1,3 @@
----
 name: Checks
 
 on:
@@ -8,6 +7,11 @@ jobs:
   test-lint:
     name: Test and Lint
     runs-on: ubuntu-20.04
+
+    services:
+      docker:
+        image: docker:19.03.12
+        options: --privileged
 
     steps:
       - name: Set up Docker Buildx
