@@ -1,5 +1,8 @@
 ---
-name: Checkson: [push]
+name: Checks
+
+on:
+  push:
 
 jobs:
   test-lint:
